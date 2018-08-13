@@ -9,8 +9,11 @@ class record():
 def lookyLoo(record):
     
 def doASearch():
+    currentResults = []
     searchTerm = input('Search for something: ')
     if searchTerm in records:
-        for 
-
-def showSearchResults():
+        for record in records:
+            currentResults += record
+    else:
+        continue
+    print(currentResults)
