@@ -16,4 +16,12 @@ def doASearch():
             currentResults += record
     else:
         continue
-    print(currentResults)
+        
+def showResults():        
+    print("Your search results: " + currentResults)
+    selectionPrompt = input('Type the name of the item you wish to view: ')
+    if selectionPrompt != currentResults:
+        print(selectionPrompt)
+    else:
+        print(record)
+        
