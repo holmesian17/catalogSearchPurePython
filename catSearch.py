@@ -1,27 +1,22 @@
 records = []
 
-class record():
-    name = "book"
-    description = "this is a description. whatever." 
-    rankingAdditive = 0
-    numberOfHolds = 0
-
-def lookyLoo(record):
+class record:
+    def __init__(self, name, description, rankingAdditive, numberOfHolds)
+        self.name = name
+        self.description = description
+        self.rankingAdditive = rankingAdditive
+        self.numberOfHolds = numberOfHolds	
     
 def doASearch():
-    currentResults = []
+    searchResults = []
     searchTerm = input('Search for something: ')
-    if searchTerm in records:
-        for record in records:
-            currentResults += record
+    if searchTerm != records:
+	continue
     else:
-        continue
-        
-def showResults():        
-    print("Your search results: " + currentResults)
-    selectionPrompt = input('Type the name of the item you wish to view: ')
-    if selectionPrompt != currentResults:
-        print(selectionPrompt)
-    else:
-        print(record)
-        
+	for record in records:
+	    searchResults.append(record)
+
+def showResults():
+    searchResults.sort()
+    print(searchResults)
+
